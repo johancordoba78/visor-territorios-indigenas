@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Territorios indígenas – CREF y PAFT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-search/dist/leaflet-search.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="panel">
+    <h4>Filtrar territorios</h4>
+    <select id="filtroClasif">
+      <option value="Todos">Todos</option>
+      <option value="CREF y PAFT">CREF y PAFT</option>
+      <option value="Solo PAFT">Solo PAFT</option>
+      <option value="Sin CREF ni PAFT">Sin CREF ni PAFT</option>
+    </select>
+    <button id="exportMap">Exportar mapa (PNG)</button>
+    <div id="stats"></div>
+  </div>
+
+  <div id="legend">
+    <h4>Leyenda</h4>
+    <div class="item"><span class="box cref"></span> CREF y PAFT</div>
+    <div class="item"><span class="box paft"></span> Solo PAFT</div>
+    <div class="item"><span class="box sin"></span> Sin CREF ni PAFT</div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-control-search/dist/leaflet-search.min.js"></script>
+  <script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
